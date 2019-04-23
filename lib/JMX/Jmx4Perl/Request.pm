@@ -41,7 +41,7 @@ Execute an JMX operation
 
 =item LIST
 
-List MBean meta data
+List all MBeans available
 
 =item SEARCH
 
@@ -213,7 +213,7 @@ of attribute names.
 
 =item C<LIST>
   
- Order    : $mbean, $path
+ Order    : $path
 
 =item C<SEARCH>
 
@@ -278,7 +278,6 @@ sub new {
                 $self->{operation} = shift;
                 $self->{arguments} = [ @_ ];
             } elsif ($type eq LIST) {
-                $self->{mbean} = shift;
                 $self->{path} = shift;
             } elsif ($type eq SEARCH) {
                 $self->{mbean} = shift;
